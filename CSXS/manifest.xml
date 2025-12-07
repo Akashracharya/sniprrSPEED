@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest
+	Version="5.0"
+	ExtensionBundleId="com.jerryflow.v2"
+	ExtensionBundleVersion="1.0.0"
+	ExtensionBundleName="JerryFlow V2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<ExtensionList>
+		<Extension Id="com.jerryflow.v2.panel" Version="1.0" />
+	</ExtensionList>
+
+	<ExecutionEnvironment>
+		<HostList>
+			<Host Name="AEFT" Version="13.0" />
+		</HostList>
+
+	<LocaleList>
+		<Locale Code="All" />
+	</LocaleList>
+
+	<RequiredRuntimeList>
+		<RequiredRuntime Name="CSXS" Version="5.0" />
+	</RequiredRuntimeList>
+</ExecutionEnvironment>
+
+	<DispatchInfoList>
+		<Extension Id="com.jerryflow.v2.panel">
+			<DispatchInfo>
+
+			<Resources>
+				<MainPath>./index.html</MainPath>
+				<ScriptPath>./jsx/aftereffects.jsx</ScriptPath>
+				<CEFCommandLine>
+					<Parameter>--enable-nodejs</Parameter>
+					<Parameter>--allow-file-access-from-files</Parameter>
+					<Parameter>--allow-file-access</Parameter>
+					<Parameter>--mixed-context</Parameter>
+				</CEFCommandLine>
+				
+			</Resources>
+
+			<Lifecycle>
+				<AutoVisible>true</AutoVisible>
+			</Lifecycle>
+
+			<UI>
+
+				<Type>Panel</Type>
+				<Menu>JerryFlow V2 by INTRO HD</Menu>
+
+				<Geometry>
+					<Size>
+						<Height>580</Height>
+						<Width>400</Width>
+					</Size>
+				
+					
+				</Geometry>
+			</UI>
+		</DispatchInfo>
+		<Permissions>
+			<Permission>CEF_CLIPBOARD_READ</Permission>
+			<Permission>CEF_CLIPBOARD_WRITE</Permission>
+		</Permissions>
+	</Extension>
+</DispatchInfoList>
+</ExtensionManifest>

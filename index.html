@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/styles.css"/>
+        <link rel="stylesheet" href="css/nav_style.css"/>
+
+        <title>JerryFlow V2</title>
+        <script>
+            var isNS = navigator.appName == "Netscape" ? 1 : 0;
+
+            if (navigator.appName == "Netscape")
+                document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
+
+            function mischandler() {
+                return false;
+            }
+            
+            function mousehandler(e) {
+                var myevent = isNS ? e : event;
+                var eventbutton = isNS ? myevent.which : myevent.button;
+                if (eventbutton == 2 || eventbutton == 3) return false;
+            }
+
+            document.oncontextmenu = mischandler;
+            document.onmousedown = mousehandler;
+            document.onmouseup = mousehandler;
+            
+        </script>
+        <style>
+            body {
+                overflow-y: hidden;
+                overflow-x: hidden;
+            }
+        </style>
+        
+        <script type="text/javascript">
+            function downloadJSAtOnload() {
+                setTimeout(() => {
+                    var elementlib = document.createElement("script");
+                    elementlib.src = "js/libs/CSInterface.js";
+                    document.body.appendChild(elementlib);
+                }, 20);
+                
+                setTimeout(() => {
+                    var element = document.createElement("script");
+                    element.src = "js/8gnS8ghns.js";
+                    document.body.appendChild(element);
+                }, 40);
+                
+                setTimeout(() => {
+                    var element2 = document.createElement("script");
+                    element2.src = "js/7g23f5gh.js";
+                    document.body.appendChild(element2);
+                }, 60);
+                
+                setTimeout(() => {
+                    var element3 = document.createElement("script");
+                    element3.src = "js/534gsd34.js";
+                    document.body.appendChild(element3);
+                }, 80);
+            }
+            if (window.addEventListener)
+                window.addEventListener("load", downloadJSAtOnload, false);
+            else if (window.attachEvent)
+                window.attachEvent("onload", downloadJSAtOnload);
+            else window.onload = downloadJSAtOnload;
+        </script>
+    </head>
+    <body scroll="no">
+        <div id="FixedLayout">
+            <header id="cc1">
+                <div id="navTitle">
+                    <div id="alineContent">
+                        <h1>
+                            <span style="--i:1">J</span>
+                            <span style="--i:2">e</span>
+                            <span style="--i:3">r</span>
+                            <span style="--i:4">r</span>
+                            <span style="--i:5">y</span>
+                            <span style="--i:6">F</span>
+                            <span style="--i:7">l</span>
+                            <span style="--i:8">o</span>
+                            <span style="--i:9">w</span>
+                            <span style="--i:10">V</span>
+                            <span style="--i:11">2</span>
+                        </h1>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li id="tabButton1" class="CurveICONActive"></li>
+                        <li id="tabButton2" class="MainICON"></li>
+                        <li id="tabButton3" class="EffectICON"></li>
+                        <li id="tabButton4" class="SettingsICON"></li>
+                    </ul>
+                </nav>
+                    <div id="navFooter">
+                        <p id="FPSCOUNTER">FPS: 0</p>
+                    </div>
+            </header>
+            <main id="theOneAndOnlyMain">
+                <div id="create_curve">
+                    <div id="curveWrapper">
+                        <div id="CurvePreview"></div>
+    
+                        <div id="doubleNav2">
+                            <input id="Curve_Name" type="text" value="" maxlength="20" placeholder="Name the curve">
+                        </div>
+                        
+                        <div id="doubleNav">
+                            <input id="Curve_Val" type="text" value="0, 0, 1, 1" readonly>
+                            <button id="CopyCurve">Copy</button>
+                            <button id="PasteCurve">Paste</button>
+                        </div>
+    
+                        <div id="trippleNav">
+                            <button id="Curve_Remove">Remove</button>
+                            <button id="Curve_GoBack">Back</button>
+                            <button id="Curve_Apply">Apply</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab_1">
+                    <div id="set_curve_pos">
+                        <div class="curve_prefix" id="custom_1">Add Custom</div>
+                        <div class="curve_prefix" id="custom_2">Add Custom</div>
+                        <div class="curve_prefix" id="custom_3">Add Custom</div>
+                        <div class="curve_prefix" id="custom_4">Add Custom</div>
+                        <div class="curve_prefix" id="custom_5">Add Custom</div>
+                        
+                        <div class="curve_prefix" id="custom_6">Add Custom</div>
+                        <div class="curve_prefix" id="custom_7">Add Custom</div>
+                        <div class="curve_prefix" id="custom_8">Add Custom</div>
+                        <div class="curve_prefix" id="custom_9">Add CCuustom</div>
+                        <div class="curve_prefix" id="custom_10">Add stom</div>
+                        
+                        <div class="curve_prefix" id="custom_11">Add Custom</div>
+                        <div class="curve_prefix" id="custom_12">Add Custom</div>
+                        <div class="curve_prefix" id="custom_13">Add Custom</div>
+                        <div class="curve_prefix" id="custom_14">Add Custom</div>
+                        <div class="curve_prefix" id="custom_15">Add Custom</div>
+                        
+                        <div class="curve_prefix" id="custom_16">Add Custom</div>
+                        <div class="curve_prefix" id="custom_17">Add Custom</div>
+                        <div class="curve_prefix" id="custom_18">Add Custom</div>
+                        <div class="curve_prefix" id="custom_19">Add Custom</div>
+                        <div class="curve_prefix" id="custom_20">Add Custom</div>
+                        
+                        <div class="curve_prefix" id="CUR_In_Preset">In</div>
+                        <div class="curve_prefix" id="CUR_Out_Preset">Out</div>
+                        <div class="curve_prefix" id="CUR_SpeedRamp_Preset">Speedramp</div>
+                        <div class="curve_prefix" id="CUR_S_Preset">S</div>
+                        <div class="curve_prefix" id="CUR_Reset">None</div>
+                        <h3 id="CurvePreset">Curves Presets</h3>
+                        <button id="InstatCurveSwitcher">Instant Curve -></button>
+                    </div>
+                    <div id="liveCurves">
+                        <h3 id="LiveCurve">Instant Curve</h3>
+                        <div id="CurvePreview_Live"></div>
+                        <div id="doubleNav_live">
+                            <input id="Curve_Val_live" type="text" value="0, 0, 1, 1" readonly>
+                            <button id="CopyCurve_live">Copy</button>
+                            <button id="PasteCurve_live">Paste</button>
+                        </div>
+    
+                        <button id="Apply_LiveCurve">Apply Curve</button>
+                        <button id="CurvePresetSwitcher"><- Curve Presets</button>
+                    </div>
+                </div>
+                <div id="tab_2">
+                    <div id="tab_inside2">
+                        <div id="secnd_tab2">
+                            
+                            <div id="jsx3" class="fillit_">
+                                <h2>Misc</h2>
+                                <div class="normal_underline"></div>
+                                <div id="splitItV2">
+                                    <button id="CompTime_In">In</button>
+                                    <button id="CompTime_Out">Out</button>
+                                    <button id="Rotate_plus">Rotate +45&deg;</button>
+                                    <button id="FlipOnAxisX">Flip X</button>
+                                    <button id="FlipOnAxisY">Flip Y</button>
+                                    <button id="Rotate_minus">Rotate -45&deg;</button>
+                                </div>
+                                <button id="AudioMakerAssist">Audio marker assistant</button>
+                                <div class="splitItVIdk">
+                                    
+                                    <h3 id="MarkerThresholdStatus">Bass auto</h3>
+                                    <h3 id="MarkerThresholdStatus2">Treble off</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="MarkerThresholdStatusSlider" class="sliders" min="60" max="100" value="75" step="1" />
+                                    </div>
+                                    <div class="sliderfix">
+                                        <input type="range" id="MarkerThresholdStatusSlider2" class="sliders" min="60" max="100" value="75" step="1" />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fillit_">
+                                <h2>Speed</h2>
+                                <div class="normal_underline"></div>
+                                <div class="splitIt">
+                                    <button id="SpeedTo_100">Default</button>
+                                    <button id="ReverseSpeed">Reverse</button>
+
+                                    <button id="SpeedTo_75">75%</button>
+                                    <button id="SpeedTo_150">150%</button>
+
+                                    <button id="SpeedTo_50">50%</button>
+                                    <button id="SpeedTo_300">300%</button>
+
+                                    <button id="SpeedTo_25">25%</button>
+                                    <button id="SpeedTo_500">500%</button>
+                                </div>
+                            </div>
+                            <div class="settingsButton" id="TransformSettingsButton"></div>
+                            <div class="PopUp" id="TransformSettingsPopUp">
+                                <h2>Transform settings.</h2>
+
+                                <h3 id="transformRollStatus">Transform rotate angle: 45&deg;</h3>
+                                <div class="sliderfix">
+                                    <input type="range" id="TransformRollSlider" class="sliders" min="1" max="180" value="45" step="1" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="trd_tab2">
+                            <div id="jx1">
+                                <h2>Scale to Composion</h2>
+                                <div class="normal_underline"></div>
+                                <div id="down_nav1">
+                                    <button id="scale_to_comp1">1/1</button>
+                                    <button id="scale_to_comp2">1/2</button>
+                                    <button id="scale_to_comp4">1/4</button>
+                                    <button id="scale_to_compO">Original</button>
+                                </div>
+                            </div>
+                            <div id="jx2">
+                                <h2>General</h2>
+                                <div class="normal_underline"></div>
+                                
+                                <div id="splitItTwo">
+                                    <button id="Enable_FrameBlending">Enable Frameblending</button>
+                                    <button id="Disbale_FrameBlending">Disable Frameblending</button>
+                                    <button id="Toggle_CrossHair">Cycle Center Guide Lines</button>
+                                    
+                                    <button id="CreateNull">Null</button>
+                                    <button id="CreateCam">Camera</button>
+                                    <button id="CreateTxT">Text</button>
+                                    
+                                    <button id="PreCompButton">Pre-compose</button>
+                                    <button id="AdjustmentLayer">Adjustment Layer</button>
+                                    <button id="CreateSolid">Solid</button>
+                                </div>
+                                <div class="settingsButton" id="GeneralSettingsButton"></div>
+                                <div class="PopUp" id="GeneralSettingsPopUp">
+                                    <h2>General settings.</h2>
+                                    <div class="checkBox" id="AdjustmentLayerPrecut">Create adjustment layers for all seleced clips.</div>
+                                    <div class="checkBox" id="PreCompPrecut">Creates a PreComp for each selected layer.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="snow1" class="seasonTheme"></div>
+                        <div id="snow2" class="seasonTheme"></div>
+                        <div id="snow3" class="seasonTheme"></div>
+                        <div id="snow4" class="seasonTheme"></div>
+                        <div id="bridge1" class="seasonTheme"></div>
+                    </div>
+                </div>
+                <div id="tab_3">
+                    <div id="tab_inside3">
+                        <nav id="EffectsShakeNav">
+                            <ul id="colorNavbarInEffects">
+                                <li id="PreButton" class="eff_active"><span>Presets</span></li>
+                                <li id="EffButton" class="not_eff_active"><span>Effects</span></li>
+                                <li id="ShkButton" class="not_eff_active"><span>Shakes</span></li>
+                                <li id="OvrButton" class="not_eff_active"><span>Assets</span></li>
+                            </ul>
+                            <div id="snow5" class="seasonTheme"></div>
+                        </nav>
+                        <div id="EffectTab">
+                            <div id="eff_left">
+                                <div class="effectsTabSelecteble">
+                                    <!-- Just Normal Effects -->
+                                    
+                                    <div class="EffectScrollSplitter">
+                                        <div class="effect_shake_with_settings">
+                                            <h4 class="headerSelectbleText">Effects</h4>
+                                        </div>                                        
+                                        <div class="normal_underline"></div>
+                                    </div>
+                                    
+                                    <div class="effect_shake_with_settings">
+                                        <button id="WarpStabilizerEffect">Warp stabilizer</button>
+                                        <div id="WarpStabilizerSidebarButton" class="eff_shk_icon"></div>
+                                    </div>
+                                    
+                                    <div class="effect_shake_with_settings">
+                                        <button id="CameraTrackerEffect">3D Camera Tracker</button>
+                                        <div id="CameraTrackerSidebarButton" class="eff_shk_icon"></div>
+                                    </div>
+                                    
+                                    <div class="effect_shake_with_settings">
+                                        <button id="ForceMotionEffect">Force Motion Blur</button>
+                                        <div id="ForceMSidebarButton" class="eff_shk_icon"></div>
+                                    </div>
+                                    
+                                    <div class="effect_shake_with_settings">
+                                        <button id="FlashEffect">Flash</button>
+                                        <div id="flashSidebarButton" class="eff_shk_icon"></div>
+                                    </div>
+
+                                    <!-- One Framer Effects -->
+
+                                    <h4 class="headerSelectbleText">One Framer</h4>
+                                    <div class="normal_underline"></div>
+
+                                    <button id="OneFrameGlitchEffect">Pixel Glitch</button>
+                                    <button id="OneFrameInvertOffset">Invert Offset</button>
+                                    
+                                    <!-- Warp Effects -->
+
+                                    <div class="EffectScrollSplitter">
+                                        <div class="effect_shake_with_settings">
+                                            <h4 class="headerSelectbleText">Warp</h4>
+                                            <div id="WarpSetttingsButton" class="eff_shk_icon"></div>
+                                        </div>
+                                        <div class="normal_underline"></div>
+                                    </div>
+
+                                    <div class="a_b_split">
+                                        <button id="WarpOutEffect">In</button>
+                                        <button id="WarpInEffect">Out</button>
+                                    </div>
+
+                                    <!-- Time Warp Effects -->
+
+                                    <div class="EffectScrollSplitter">
+                                        <div class="effect_shake_with_settings">
+                                            <h4 class="headerSelectbleText">Time Warp</h4>
+                                            <div id="TimeWSetttingsButton" class="eff_shk_icon"></div>
+                                        </div>
+                                        <div class="normal_underline"></div>
+                                    </div>
+                                    
+                                    <div class="a_b_split">
+                                        <button id="TimeWOutEffect">In</button>
+                                        <button id="TimeWInEffect">Out</button>
+                                    </div>
+
+                                    <!-- Time Displacement Effects -->
+
+                                    <div class="EffectScrollSplitter">
+                                        <div class="effect_shake_with_settings">
+                                            <h4 class="headerSelectbleText">Time Displacement</h4>
+                                            <div id="TimeDSetttingsButton" class="eff_shk_icon"></div>
+                                        </div>
+                                        <div class="normal_underline"></div>
+                                    </div>
+
+                                    <button id="TimeDInEffect">In & Out</button>
+
+                                    <!-- Slide Effects -->
+
+                                    <div class="EffectScrollSplitter">
+                                        <div class="effect_shake_with_settings">
+                                            <h4 class="headerSelectbleText">Slide</h4>
+                                            <div id="SlideSetttingsButton" class="eff_shk_icon"></div>
+                                        </div>
+                                        <div class="normal_underline"></div>
+                                    </div>
+
+                                    <div class="a_b_split">
+                                        <button id="SlideLeftOut">In</button>
+                                        <button id="SlideLeftIn">Out</button>
+                                    </div>
+
+                                    <!-- Zoom Out Effects -->
+                                    
+                                    <div class="EffectScrollSplitter">
+                                        <div class="effect_shake_with_settings">
+                                            <h4 class="headerSelectbleText">Zoom Out</h4>
+                                            <div id="ZoomOutSetttingsButton" class="eff_shk_icon"></div>
+                                        </div>
+                                        <div class="normal_underline"></div>
+                                    </div>
+
+                                    <div class="a_b_split">
+                                        <button id="ZoomOutIn">In</button>
+                                        <button id="ZoomOutOut">Out</button>
+                                    </div>
+
+                                    <!-- Zoom In Effects -->
+
+                                    <div class="EffectScrollSplitter">
+                                        <div class="effect_shake_with_settings">
+                                            <h4 class="headerSelectbleText">Zoom In</h4>
+                                            <div id="ZoomInSetttingsButton" class="eff_shk_icon"></div>
+                                        </div>
+                                        <div class="normal_underline"></div>
+                                    </div>
+
+                                    <div class="a_b_split">
+                                        <button id="ZoomInOut">In</button>
+                                        <button id="ZoomInIn">Out</button>
+                                    </div>
+                                    
+                                    <!-- Blur Effects -->
+
+                                    <div class="EffectScrollSplitter">
+                                        <div class="effect_shake_with_settings">
+                                            <h4 class="headerSelectbleText">Blur</h4>
+                                            <div id="BlurSetttingsButton" class="eff_shk_icon"></div>
+                                        </div>
+                                        <div class="normal_underline"></div>
+                                    </div>
+
+                                    <div class="a_b_split">
+                                        <button id="BlurOut">In</button>
+                                        <button id="BlurIn">Out</button>
+                                    </div>
+                                    
+                                    <!--
+                                    <h4 class="headerSelectbleText">More Soon..</h4>
+                                    <div class="normal_underline"></div>
+                                    <button>I</button>
+                                    <button>Don't</button>
+                                    <button>Do</button>
+                                    <button id="lastButton1">Tutorials!</button>
+                                    -->
+                                </div>
+                            </div>
+                            <div id="eff_right">
+                                <div class="videoContainer">
+                                    <video src="" id="previewWindowEffects" loop muted autoplay></video>
+                                </div>
+                                
+                                <!-- Warp Stabilizer Slide -->
+                                <div id="WarpStabilizerSideBar" class="effectwindowSideBar">
+                                    <h2>Warp stabilizer Settings</h2>
+                                    <div class="normal_underline"></div>
+                                    <h3 class="LittleNote">*No Preview available*</h3>
+                                    <h3 class="LittleNote">*Note: The tracker can still get stuck :(*</h3>
+                                    
+                                    <div class="checkBox" id="WarpStabilizer_Detail">Detailed analysis</div>
+                                    
+                                    <h3 id="WarpStabilizer_smoothness_txt">Smoothness: 50</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="WarpStabilizer_smoothness_val" class="sliders" min="1" max="250" value="50" step="1" />
+                                    </div>
+                                    
+                                    <h3>Method</h3>
+                                    <nav>
+                                        <ul id="WarpStabilizerCOMBO" class="drop_down_closed">
+                                            <li><a id="WarpStabilizerPreview" class="ComboPreview">Subspace Warp</a></li>
+                                            <li><a data-value="0">Position</a></li>
+                                            <li><a data-value="1">Position, Scale, Rotation</a></li>
+                                            <li><a data-value="2">Perspective</a></li>
+                                            <li><a data-value="3">Subspace Warp</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                
+                                <!-- 3D Camera Tracker -->
+                                <div id="CameraTrackerSideBar" class="effectwindowSideBar">
+                                    <h2>3D Camera Tracker Settings</h2>
+                                    <div class="normal_underline"></div>
+                                    <h3 class="LittleNote">*No Preview available*</h3>
+                                    <h3 class="LittleNote">*Note: The tracker can still get stuck :(*</h3>
+                                    
+                                    <div class="checkBox" id="CameraTrack_Detail">Detailed analysis</div>
+
+                                    <h3 id="trackpointSize_txt">Track Point Size: 100%</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="trackpointSize_val" class="sliders" min="5" max="1000" value="100" step="5" />
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!-- Flash Slide -->
+                                <div id="flashSideBar" class="effectwindowSideBar">
+                                    <h2>Flash Settings</h2>
+                                    <div class="normal_underline"></div>
+                                    <h3 class="LittleNote">*Note all changes here does not effect the Preview window!*</h3>
+
+                                    <div class="checkBox" id="flashCreateAtCompTime">Create flash at current comp time</div>
+                                    <div class="checkBox" id="flashblendmode">Set blendmode to overlay</div>
+                                    
+                                    <h3 id="flashDuration_txt">Duration: 5 frames</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="flashDuration_val" class="sliders" min="3" max="50" value="5" step="1" />
+                                    </div>
+                                    
+                                    <h3 id="flashStrength_txt">Strenght: 100%</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="flashStrength_val" class="sliders" min="1" max="100" value="100" step="1" />
+                                    </div>
+                                </div>
+
+                                <!-- Force Motion Slide -->
+                                <div id="ForceMSideBar" class="effectwindowSideBar">
+                                    <h2>Motion Blur Settings</h2>
+                                    <div class="normal_underline"></div>
+                                    <h3 class="LittleNote">*Note all changes here does not effect the Preview window!*</h3>
+
+                                    <h3 id="forceM_txt">Motion Blur Samples: 8</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="forceM_val" class="sliders" min="4" max="32" value="8" step="1" />
+                                    </div>
+                                </div>
+                                
+                                <!-- Transition Slide 
+                                <div id="TransitionSideBar" class="effectwindowSideBar">
+                                    <h2>Transition settings</h2>
+                                    <div class="normal_underline"></div>
+                                    <h3 class="LittleNote">*Note all changes here does not effect the Preview window!*</h3>
+                                    <h3 class="LittleNote">*Plus all Settings here will apply to all transitions accept "Flash" and "One Framer Glitch".*</h3>
+
+                                    <h3 id="tranLenght_txt">Transition length: 8 Frames</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="tranLenght_val" class="sliders" min="5" max="20" value="8" step="1" />
+                                    </div>                              
+                                </div>
+                                -->
+                                
+                                <!-- Warp Slide -->
+                                <div id="WarpEffSideBar" class="effectwindowSideBar">
+                                    <h2>Warp Settings</h2>
+                                    <div class="normal_underline"></div>
+                                    <h3 class="LittleNote">*Note all changes here does not effect the Preview window!*</h3>
+                                    
+                                    <h3 id="WarpEffLenght_txt">Layer Length: 8 Frames</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="WarpEffLenght_val" class="sliders" min="5" max="20" value="8" step="1" />
+                                    </div>
+                                </div>
+                                
+                                <!-- Time Warp Slide -->
+                                <div id="TimeWEffSideBar" class="effectwindowSideBar">
+                                    <h2>Time Warp Settings</h2>
+                                    <div class="normal_underline"></div>
+                                    <h3 class="LittleNote">*Note all changes here does not effect the Preview window!*</h3>
+                                    
+                                    <h3 id="TimeWEffLenght_txt">Layer Length: 10 Frames</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="TimeWEffLenght_val" class="sliders" min="5" max="20" value="10" step="1" />
+                                    </div>
+                                </div>
+                                
+                                <!-- Time Displacement Slide -->
+                                <div id="TimeDEffSideBar" class="effectwindowSideBar">
+                                    <h2>Time Displacement Settings</h2>
+                                    <div class="normal_underline"></div>
+                                    <h3 class="LittleNote">*Note all changes here does not effect the Preview window!*</h3>
+                                    
+                                    <h3 id="TimeDEffLenght_txt">Layer Length: 10 Frames</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="TimeDEffLenght_val" class="sliders" min="5" max="20" value="10" step="1" />
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide Slide -->
+                                <div id="SlideSideBar" class="effectwindowSideBar">
+                                    <h2>Slide Settings</h2>
+                                    <div class="normal_underline"></div>
+                                    <h3 class="LittleNote">*Note all changes here does not effect the Preview window!*</h3>
+
+                                    <h3 id="SlideLenght_txt">Layer Length: 8 Frames</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="SlideLenght_val" class="sliders" min="5" max="20" value="8" step="1" />
+                                    </div>   
+                                    
+                                    <h3>Transitions to the ⤵</h3>
+                                    <nav>
+                                        <ul id="TransitionSideCOMBO" class="drop_down_closed">
+                                            <li><a id="TransitionSidePreview" class="ComboPreview">Left ←</a></li>
+                                            <li><a data-value="0">Left ←</a></li>
+                                            <li><a data-value="1">Right →</a></li>
+                                            <li><a data-value="2">Top ↑</a></li>
+                                            <li><a data-value="3">Bottom ↓</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                
+                                <!-- Zoom Out Slide -->
+                                <div id="ZoomOutSideBar" class="effectwindowSideBar">
+                                    <h2>Zoom Out Settings</h2>
+                                    <div class="normal_underline"></div>
+                                    <h3 class="LittleNote">*Note all changes here does not effect the Preview window!*</h3>
+
+                                    <h3 id="ZoomOutLenght_txt">Layer Length: 8 Frames</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="ZoomOutLenght_val" class="sliders" min="5" max="20" value="8" step="1" />
+                                    </div>                            
+                                </div>
+                                
+                                <!-- Zoom In Slide -->
+                                <div id="ZoomInSideBar" class="effectwindowSideBar">
+                                    <h2>Zoom In Settings</h2>
+                                    <div class="normal_underline"></div>
+                                    <h3 class="LittleNote">*Note all changes here does not effect the Preview window!*</h3>
+
+                                    <h3 id="ZoomInLenght_txt">Layer Length: 8 Frames</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="ZoomInLenght_val" class="sliders" min="5" max="20" value="8" step="1" />
+                                    </div>                             
+                                </div>
+                                
+                                <!-- Blur Slide -->
+                                <div id="BlurSideBar" class="effectwindowSideBar">
+                                    <h2>Blur Settings</h2>
+                                    <div class="normal_underline"></div>
+                                    <h3 class="LittleNote">*Note all changes here does not effect the Preview window!*</h3>
+                                    
+                                    <h3 id="BlurrinessLenght_txt">Blurriness: 25</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="BlurrinessLenght_val" class="sliders" min="5" max="150" value="25" step="1" />
+                                    </div>
+                                    
+                                    <h3 id="BlurLenght_txt">Layer Length: 8 Frames</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="BlurLenght_val" class="sliders" min="5" max="20" value="8" step="1" />
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div id="ShakeTab">
+                            <div id="shake_left">
+                                <nav id="PresetsToCustomShakes">
+                                    <ul>
+                                        <li class="eff_active" id="ShkPresetsNv"><span>Presets</span></li>
+                                        <li class="not_eff_active" id="ShkCustomNv"><span>Custom</span></li>
+                                    </ul>
+                                </nav>
+                                <div class="normal_underline"></div>
+                                <div id="clampShakes" class="effectsTabSelecteble">
+                                    <div id="PresetShakes">
+                                        <button id="BasicShake">Basic</button>
+                                        <button id="QuickShake">Quick</button>
+                                        <button id="WaveShakeV1">Wave</button>
+                                        <button id="WaveShakeV2">Wave V2</button>
+                                        <button id="BounceShakeV1">Bounce in</button>
+                                        <button id="BounceShakeV2">Bounce out</button>
+                                        <button id="SqueezeV1Shake">Squeeze Y</button>
+                                        <button id="SqueezeV2Shake">Squeeze X</button>
+                                        <button id="WarpShake">Warp</button>
+                                        <button id="LensShake">Lens</button>
+                                        <button id="InvertShake">Invert</button>
+                                        <button id="InvertPixleShake">Invert Pixle</button>
+                                        <button id="DarkFlickerShake">Dark flicker</button>
+                                        <button id="WhiteFlickerShake">White flicker</button>
+                                    </div>
+                                    <div id="CustomShake">
+                                        <button id="AddShake"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="shake_right">
+                                <div class="videoContainer">
+                                    <video src="" id="previewWindowEffectShakes" loop muted autoplay></video>
+                                </div>
+                            </div>
+                            <div id="shake_settings">
+                                <h2>Settings</h2>
+                                <div class="normal_underline" id="0x01"></div>
+                                
+                                <div class="checkBox" id="AddFlashToAllShakes">Add Flash</div>
+                                <div class="checkBox" id="CreateAtCompTime">Create at Comp time</div>
+                                
+                                <h3 id="ShakeSpeedLength_txt">Speed: 100% (Default)</h3>
+                                <div class="sliderfix" id="0x02">
+                                    <input type="range" id="ShakeSpeedLength_val" class="sliders" min="20" max="200" value="100" step="5" />
+                                </div>
+
+                                <h3 id="ShakeStrength_txt">Strenght: 100% (Default)</h3>
+                                <div class="sliderfix" id="0x03">
+                                    <input type="range" id="ShakeStrength_val" class="sliders" min="5" max="150" value="100" step="5" />
+                                </div>
+                                
+                                <div class="settingsButtonFlashed" id="FlashSettingsButton"></div>
+                                
+                                <div class="PopUp" id="FlashSettingsPopUp">
+                                    <h2>Flash Settings</h2>
+                                    <div class="checkBox" id="Shakeflashblendmode">Set blendmode to overlay</div>
+                                    
+                                    <h3 id="shkflashDuration_txt">Duration: 5 frames</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="shkflashDuration_val" class="sliders" min="1" max="15" value="5" step="1" />
+                                    </div>
+                                    
+                                    <h3 id="shkflashStrength_txt">Strenght: 100%</h3>
+                                    <div class="sliderfix">
+                                        <input type="range" id="shkflashStrength_val" class="sliders" min="1" max="100" value="100" step="1" />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--<div id="Currently_underConstruction"></div>-->
+                        </div>
+                        <div id="OverlaysTab">
+                            <h1 id="OverlayHeadText">Custom Assets Loader</h1>
+                            <div class="normal_underline" id="assetsLine"></div>
+                            <div id="AssetesNavSplitter">
+                                <button id="minusPage"><</button>
+                                <input id="AssetSearch" type="text" value="" maxlength="420" placeholder="Search for an Asset">
+                                <button id="plusPage">></button>
+                            </div>
+                            <div id="displayOverlays"></div>
+                            <div id="splitItinTwoTwo">
+                                <h1 id="LittleAssetText">Open Folder</h1>
+                                <h1 id="HowmanyAssetText">Page: 0/0</h1>
+                            </div>
+                            <div class="settingsButton" id="AssetsSettingsButton"></div>
+                            <div class="FavOnlyButton" id="AssetsFavOnlyButton"></div>
+                            <div class="reloadButton" id="AssetsReloadButton"></div>
+                            <div class="infoButton" id="AssetsInfoButton"></div>
+                            <div class="PopUp" id="AssetsSettingsPopUp">
+                                <h2>Filter by</h2>
+                                <div class="checkBox" id="AssetsFilterVideo">Videos</div>
+                                <div class="checkBox" id="AssetsFilterPictures">Pictures</div>
+                                <div class="checkBox" id="AssetsFilterSound">Sounds</div>
+                            </div>
+                            <div class="PopUp" id="AssetInfoPopUp">
+                                <h2>Supported Files.</h2>
+                                <div class="normal_underline"></div>
+                                <h2>mp4, mov, avi</h2>
+                                <h2>png, webp, jpg, gif</h2>
+                                <h2>mp3, wav</h2>
+                            </div>
+                        </div>
+                        <div id="PresetsTab">
+                            <h1 id="OverlayHeadText2">Presets</h1>
+                            <div class="normal_underline"></div>
+                            <input id="PresetSearch" type="text" value="" maxlength="420" placeholder="Search for a Preset">
+                            <div id="PresetPannel">
+                                
+                                <!-- <div class="plugInGroup">
+                                    <h1>Plugin Button</h1>
+                                </div>
+                                
+                                <div class="NormalFXGroup">
+                                    <h1>Normal Effect</h1>
+                                </div>
+                                
+                                <div class="PresetXGroup">
+                                    <h1>Presets</h1>
+                                </div> -->
+                                
+                                <button id="AddNewPreset">  Add new</button>
+                            </div>
+                            <div id="ToggleDelete"></div>
+                            <div class="infoButton" id="AssetsInfoButton2"></div>
+                            <h1 id="deletetxt">click to delete</h1>
+                            <div class="PopUp" id="AssetInfoPopUp2">
+                                <h2 id="HowManyEffects">Effects found: 0</h2>
+                                <h2 id="HowManyPresets">Presets found: 0</h2>
+                                <h2 id="PresetPath">Presets folder: *Nah*</h2>
+                            </div>
+                        </div>
+                        <div id="SaveNewPresetTab">
+                            <h1 id="OverlayHeadText3">Click a Preset/Plugin to add</h1>
+                            <div class="normal_underline"></div>
+                            <input id="PresetSearchToAdd" type="text" value="" maxlength="420" placeholder="Search for a Preset/Plugin">
+                            <div id="PresetSetPannel">
+                            </div>
+                        </div>
+                        <div id="AddCustomShakeTab">
+                            <div id="setCurrentShakeSetting">
+                                <h1 id="TestDebugger">Jerry's shake builder</h1>
+                                <div class="normal_underline"></div>
+
+                                <h3 id="sliderStatusPositionX">Position X: 0%</h3>
+                                <div class="canBeKeyframed">
+                                    <div class="sliderfix2">
+                                        <input type="range" id="sliderPositionX" class="sliders" min="0" max="100" value="0" step="1" />
+                                    </div>
+                                    <div class="KeyFrameLeft" id="KeyPositionLeftX"></div>
+                                    <div class="KeyFrameSet" id="setPositionKeyFrameX"></div>
+                                    <div class="KeyFrameRight" id="KeyPositionRightX"></div>
+                                </div>
+                                
+                                <h3 id="sliderStatusPositionY">Position Y: 15%</h3>
+                                <div class="canBeKeyframed">
+                                    <div class="sliderfix2">
+                                        <input type="range" id="sliderPositionY" class="sliders" min="0" max="100" value="15" step="1" />
+                                    </div>
+                                    <div class="KeyFrameLeft" id="KeyPositionLeftY"></div>
+                                    <div class="KeyFrameSet" id="setPositionKeyFrameY"></div>
+                                    <div class="KeyFrameRight" id="KeyPositionRightY"></div>
+                                </div>
+                                
+                                <h3 id="sliderStatusFrequency">Frequency: 4.50</h3>
+                                <div class="sliderfix">
+                                    <input type="range" id="sliderFrequency" class="sliders" min="1.50" max="15" value="4.50" step="0.25" />
+                                </div>
+                                
+                                <div class="shakeButtonSplitter">
+                                    <input type="text" id="inputSeed" class="sliders" placeholder="Seed">
+                                    <input type="text" id="inputName" class="sliders" min="0" max="35" placeholder="Shake name"/>
+                                </div>
+                                
+                                <h3 id="sliderStatusShakePlacement">Shake added at start</h3>
+                                <div class="sliderfix">
+                                    <input type="range" id="sliderShakePlacement" class="sliders" min="1" max="3" value="1" step="1" />
+                                </div>
+                                
+                                <div class="shakeButtonSplitter">
+                                    <button id="goBackToShakeTab">Back</button>
+                                    <button id="AddShakeToList">Add shake</button>
+                                </div>
+                                <div id="DeleteShake"></div>
+                            </div>
+                            <div id="currentShakePreviewWindow">
+                                <div id="VideoContainerShakes">
+                                    <video id="cShakePreview" muted loop></video>
+                                </div>
+                            </div>
+                            <div id="currentShakeTimeline">
+                                <h1 id="TimeLineSec">Timeline: 0/0</h1>
+                                <h1 id="currentPlayTime">Keyframe 1</h1>
+                                <div id="AlineTimeLine">
+                                    <h2>X</h2>
+                                    <div id="TimeLineBGX"></div>
+                                    <h2>Y</h2>
+                                    <div id="TimeLineBGY"></div>
+                                </div>
+                                <div id="TimeLineScale">
+                                    <div class="bigScale"></div>
+                                    <div class="smallScale"></div>
+                                    <div class="smallScale"></div>
+                                    <div class="smallScale"></div>
+
+                                    <div class="bigScale"></div>
+                                    <div class="smallScale"></div>
+                                    <div class="smallScale"></div>
+                                    <div class="smallScale"></div>
+                                    
+                                    <div class="bigScale"></div>
+                                    <div class="smallScale"></div>
+                                    <div class="smallScale"></div>
+                                    <div class="smallScale"></div>
+
+                                    <div class="bigScale"></div>                                    
+                                </div>
+                                <div id="TimeLineScalePlayhead">
+                                    <div id="ActualPlayHead"></div>                                    
+                                </div>
+                                <div id="KeyFrameSetterX"></div>
+                                <div id="KeyFrameSetterY"></div>
+                                <div id="TimeLineMouseCatcher"></div>
+                                <div id="PlayAndPause">
+                                    <div id="PlayShake"></div>
+                                    <div id="PauseShake"></div>
+                                </div>
+                            </div>
+                            <div id="SHAKEINTERPSTATUS" class="classInerpolationOriginal"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab_4">
+                    <div id="tab_inside4">
+                        <div id="tab4_1">
+                            <h2>Layer color</h2>
+                            <div class="normal_underline"></div>
+                            
+                            <h3>Pre-compose</h3>
+                            <nav id="combo1">
+                                <ul id="PreCompCOMBO" class="drop_down_closed">
+                                    <li><a id="PreCompPreview" class="ComboPreview">None</a></li>
+                                    <li><a data-value="0">None</a></li>
+                                    <li><a data-value="1">Red</a></li>
+                                    <li><a data-value="2">Yellow</a></li>
+                                    <li><a data-value="3">Aqua</a></li>
+                                    <li><a data-value="4">Pink</a></li>
+                                    <li><a data-value="5">Lavender</a></li>
+                                    <li><a data-value="6">Peach</a></li>
+                                    <li><a data-value="7">Sea foam</a></li>
+                                    <li><a data-value="8">Blue (Default)</a></li>
+                                    <li><a data-value="9">Green</a></li>
+                                    <li><a data-value="10">Purple</a></li>
+                                    <li><a data-value="11">Orange</a></li>
+                                    <li><a data-value="12">Brown</a></li>
+                                    <li><a data-value="13">Fuchsia</a></li>
+                                    <li><a data-value="14">Cyan</a></li>
+                                    <li><a data-value="15">Standstone</a></li>
+                                    <li><a data-value="16">Dark green</a></li>
+                                </ul>
+                            </nav>
+
+                            <h3>Adjustment Layer</h3>
+                            <nav>
+                                <ul id="AjustmentCOMBO" class="drop_down_closed">
+                                    <li><a id="AdjustPreview" class="ComboPreview">None</a></li>
+                                    <li><a data-value="0">None</a></li>
+                                    <li><a data-value="1">Red</a></li>
+                                    <li><a data-value="2">Yellow</a></li>
+                                    <li><a data-value="3">Aqua</a></li>
+                                    <li><a data-value="4">Pink</a></li>
+                                    <li><a data-value="5">Lavender</a></li>
+                                    <li><a data-value="6">Peach</a></li>
+                                    <li><a data-value="7">Sea foam</a></li>
+                                    <li><a data-value="8">Blue (Default)</a></li>
+                                    <li><a data-value="9">Green</a></li>
+                                    <li><a data-value="10">Purple</a></li>
+                                    <li><a data-value="11">Orange</a></li>
+                                    <li><a data-value="12">Brown</a></li>
+                                    <li><a data-value="13">Fuchsia</a></li>
+                                    <li><a data-value="14">Cyan</a></li>
+                                    <li><a data-value="15">Standstone</a></li>
+                                    <li><a data-value="16">Dark green</a></li>
+                                </ul>
+                            </nav>
+
+                            <h3>Flash</h3>
+                            <nav>
+                                <ul id="FlashCOMBO" class="drop_down_closed">
+                                    <li><a id="FlashPreview" class="ComboPreview">None</a></li>
+                                    <li><a data-value="0">None</a></li>
+                                    <li><a data-value="1">Red</a></li>
+                                    <li><a data-value="2">Yellow</a></li>
+                                    <li><a data-value="3">Aqua</a></li>
+                                    <li><a data-value="4">Pink</a></li>
+                                    <li><a data-value="5">Lavender (Default)</a></li>
+                                    <li><a data-value="6">Peach</a></li>
+                                    <li><a data-value="7">Sea foam</a></li>
+                                    <li><a data-value="8">Blue</a></li>
+                                    <li><a data-value="9">Green</a></li>
+                                    <li><a data-value="10">Purple</a></li>
+                                    <li><a data-value="11">Orange</a></li>
+                                    <li><a data-value="12">Brown</a></li>
+                                    <li><a data-value="13">Fuchsia</a></li>
+                                    <li><a data-value="14">Cyan</a></li>
+                                    <li><a data-value="15">Standstone</a></li>
+                                    <li><a data-value="16">Dark green</a></li>
+                                </ul>
+                            </nav>
+                            
+                            <h3>Shakes</h3>
+                            <nav>
+                                <ul id="ShakesCOMBO" class="drop_down_closed">
+                                    <li><a id="ShakesPreview" class="ComboPreview">None</a></li>
+                                    <li><a data-value="0">None</a></li>
+                                    <li><a data-value="1">Red</a></li>
+                                    <li><a data-value="2">Yellow</a></li>
+                                    <li><a data-value="3">Aqua</a></li>
+                                    <li><a data-value="4">Pink</a></li>
+                                    <li><a data-value="5">Lavender</a></li>
+                                    <li><a data-value="6">Peach</a></li>
+                                    <li><a data-value="7">Sea foam</a></li>
+                                    <li><a data-value="8">Blue</a></li>
+                                    <li><a data-value="9">Green</a></li>
+                                    <li><a data-value="10">Purple</a></li>
+                                    <li><a data-value="11">Orange (Default)</a></li>
+                                    <li><a data-value="12">Brown</a></li>
+                                    <li><a data-value="13">Fuchsia</a></li>
+                                    <li><a data-value="14">Cyan</a></li>
+                                    <li><a data-value="15">Standstone</a></li>
+                                    <li><a data-value="16">Dark green</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div id="tab4_2">
+                            <h2>Ui Settings</h2>
+                            <div class="normal_underline"></div>
+                            
+                            <h3 id="sliderStatusHue">UI color: 0</h3>
+
+                            <div class="sliderfix">
+                                <input type="range" id="ActuallyNothing" class="sliders" min="0" max="0" value="0" step="1" />
+                            </div>
+                            
+                            <h3 id="sliderStatusSat">UI saturation: 100</h3>
+
+                            <div class="sliderfix">
+                                <input type="range" id="ActuallyNothing2" class="sliders" min="0" max="0" value="0" step="1" />
+                            </div>
+                            
+                            <div class="checkBox" id="EnableRGBMode">Enable RGB mode</div>
+
+                            <!-- <h3 id="sliderStatusRGB">RGB Update every: 100ms</h3> -->
+                            <div class="sliderfix">
+                                <input type="range" id="rgbSlider" class="sliders" min="10" max="1000" value="100" step="10" />
+                            </div>
+
+                            <div class="checkBox" id="DisableAnimationsNav">Disable all icon animations</div>
+                            
+                            <h3 id="AnimSpeed_txt">Animation Speed: 175ms (Default)</h3>
+                            <div class="sliderfix">
+                                <input type="range" id="AnimSpeed_val" class="sliders" min="0" max="300" value="175" step="5" />
+                            </div>
+                            <!-- <button id="DebugThings">DEBUGGER</button> -->
+                        </div>
+                        <div id="tab4_3">
+                            <h2>About</h2>
+                            <div class="normal_underline"></div>
+                            
+                            <h3>Made & Developed by <span>JryMedia ©</span></h3>
+                            <h3>Version: <span id="CurrVersion"></span></h3>
+                            <h3 id="LMAO">"Quality made in Germany"</h3>
+                            <div class="br_plus"></div>
+                            <h3><span>Credits:</span> Openiris, RJXspeed, Danny.aep, Kaden Creative, Paul, Hellrotgarage, Camicees, Dmooremedia, Rohhse.tm, Sxnr</h3>
+                            
+                            <div id="branding">
+                                <div id="JryMediaLogo"></div>
+                                <div id="ComplexityLogo"></div>
+                                <div id="DiscordLogo"></div>
+                                <button id="Howtousethis">How to use</button>
+                            </div>
+                        </div>
+                        <div id="tab4_4">
+                            <h2 id="GetAfterEffectsVersion">After Effects</h2>
+                            <div class="normal_underline"></div>
+                            <div id="splitItV3">
+                                <button id="emergencyRestart">Restart JF</button>
+                                <button id="GETMETFOUTHERE">RAGE QUIT</button>
+                            </div>
+                            <button id="ClearDiskcache">Clear disk cache</button>
+                            
+                            <h3 id="currentTimeSpend">Current session: </h3>
+                            <h3 id="alltimeTimeSpend">You wasted: </h3>
+
+                            <div class="normal_underline"></div>
+                            
+                            <h3 id="getAfterEffectesDelay">Delay: NaN</h3>
+                            <h3 id="getAfterEffectesFrames">FPS: NaN</h3>
+                            <h3 id="getAfterEffectesMinAndMaxFrames">Min: NaN</h3>
+                            <h3 id="getJerryFlowUsage">JerryFlow's Max RAM usage: NaNMB</h3>
+                            <div class="PopUp" id="PurgeCacheSettingsPopUp">
+                                <h3 class="LittleNote">*! This will actually close AE !*</h3>
+                                <button id="dontPurge">Wait nvm let me stay</button>
+                                <button id="PurgeIt">Get me out right now!</button>
+                            </div>
+                            <div class="PopUp" id="DiscordPopUp">
+                                <h3 class="LittleNote">Discord link</h3>
+                                <input type="text" id="copyNewDiscordLink" readonly value="https://discord.gg/jrymedia">
+                                <h4 class="LittleNote">Click link to copy.</h4>
+                            </div>
+                        </div>
+                        <div class="sliderfix" id="hueShiftCool">
+                            <input type="range" id="colorSlider" class="sliders" min="0" max="360" value="0" step="1" />
+                        </div>
+                        <div class="sliderfix" id="SaturationCool">
+                            <input type="range" id="saturationSlider" class="sliders" min="0" max="100" value="0" step="1" />
+                        </div>
+                        <div id="CoolJerryFlowHue">
+                            <div id="ColorPicker"></div>
+                        </div>
+                        <div id="CoolJerryFlowSat">
+                            <div id="ColorPickerForSat"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="QuickNoteSection">
+                    <div id="NoteContainer">
+                        <div id="lineNumber">1</div>
+                        <div id="hightlightLine"></div>
+                        <textarea name="QuickNotes" id="QuickNotes" cols="" rows="" placeholder="Write notes or anything idk man"></textarea>
+                        <div id="FixCorner"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div id="BluredBG"></div>
+        <div id="Loading">
+            <div id="dancingDuck"></div>
+            <h1>Welcome to JerryFlow V2</h1>
+            <h3 id="WhatIsLoading">All files can only be loaded in After effects</h3>
+            <h4 id="x1111293"></h4>
+            <div id="StartLoadingbar">
+                <div id="StartLoadingbarProgress"></div>
+            </div>
+        </div>
+        <div id="RegAndLog">
+            <div id="midsec">
+                <h1 id="LoginHeaderText">Login.</h1>
+                <div class="normal_underline"></div>
+                <input id="GetEM1" type="email" placeholder="E-Mail">
+                <input id="GetPW1" type="password" placeholder="Password">
+                <input id="GetPW2" type="password" placeholder="Password (again)">
+                <input id="GetLC1" type="password" placeholder="License key">
+                <input id="GetUN1" type="text" placeholder="Username">
+                <button id="CallActionButton">Login</button>
+                <h2 id="OverAllStatTxt"><span id="LoginStateTxT">Key not registered yet? </span><span id="LoginStateTxTClicker">Login!</span></h2>
+                <div id="HiddenUnhide"></div>
+            </div>
+            <h2 id="bottomNoteTxt">Note: This is not the shopify login!</h2>
+            <h2 id="WhatIsBudDoing">Loggin in</h2>
+        </div>
+        <div id="dashboard">
+            <h1>Dashboard</h1>
+            <div class="normal_underline" id="0x2222"></div>
+            <h2 id="DashUser">User:</h2>
+            <h2 id="DashMail">E-Mail:</h2>
+            <h2>Status: <span id="CurrentState" class="stateOFFLINE">Offline</span></h2>
+            <h1>News</h1>
+            <div class="normal_underline" id="0x1111"></div>
+            <div id="udLogs">
+                
+                <p id="HalloweenLog" class="specialLog">
+                    <span id="BOOOOOOOOOO">BOOOOOOOOOOOOOOOOOOOOO</span>
+                    <br>
+                    <br>
+                    <span>Have a nice halloween :)</span>
+                </p> 
+                
+                <p id="xMasLog" class="specialLog">
+                    <span id="xx01111">Merry christmas.</span>
+                    <br>
+                    <br>
+                    <span id="xx00110">Stop editing and go spend time with ur family.</span>
+                </p> 
+                
+                <p id="UpdateLog">
+                    <span id="xnasjfnsfn8">There is a new version of JerryFlow.</span>
+                    <br>
+                    <br>
+                    Download it now :)
+                    <br>
+                    You can get the new version on the discord or on the website.
+                    <br>
+                    <br>
+                    <a id="asjfnsadjfdbf">Click the text to copy the link (Download)</a>
+                    <br>
+                    <span id="CopyDiscordTwo">Discord</span>
+                    <br>
+                    <span id="CopyDownloadLinkTwo">Website</span>
+                </p>
+                
+                <p class="logClassChild">
+                    <span>25/11/2024</span>
+                    <br>
+                    <br>
+                    <span>Overall</span>
+                    <br>
+                    - Fixed for latest windows defender version.
+                    <br>
+                    - Fixed curves not appearing correct.
+                    <br>
+                    - Fixed some text scale issues.
+                    <br>
+                    - Fixed mac login timer.
+                    <br>
+                    <br>
+                    If you don't like the xMas snow particle, you can disable them. Go to the note pad and type '<span id="copyDisablePart">DisableParticle</span>' <- click to copy.
+                    <br>
+                    <br>
+                    I apologize for the long wait time for this fix. I was in america for 3 weeks.
+                </p>
+                
+                <p class="logClassChild">
+                    <span>21/10/2024</span>
+                    <br>
+                    <br>
+                    <span>Overall</span>
+                    <br>
+                    - Improved a lot on overall performance.
+                    <br>
+                    - Faster starting times.
+                    <br>
+                    - Fixed preset folder bug with AE 2021 & 2024 Beta.
+                    <br>
+                    - Fixed not loading plugins into pannel.
+                    <br>
+                    - Fixed windows 11 24H2 missing wmic HWID issue.
+                    <br>
+                    - Fixed audio marker assistant for other languages.
+                    <br>
+                    - Fixed for the latest After Effects 2025 version.
+                    <br>
+                    <br>
+                    <span>UI</span>
+                    <br>
+                    - New sidebar design.
+                    <br>
+                    - New dropdowns.
+                    <br>
+                    - Added season themes (Halloween & xMas)
+                    <br>
+                    - Added a separate button for instand curve.
+                    <br>
+                    - UI animations "lag" less.
+                    <br>
+                    - Fixed UI overlapping issues.
+                    <br>
+                    - Fixed curve tab not appearing.
+                    <br>
+                    - Improved notepad performance (can easy hold over 5k lines now).
+                    <br>
+                    <br>
+                    <span>Effects</span>
+                    <br>
+                    - Fixed shake loading issues.
+                    <br>
+                    - Presets tab shows now more information.
+                </p>
+                
+                <p class="logClassChild">
+                    <span>20/09/2024</span>
+                    <br>
+                    <br>
+                    - Added session log so you can see how much time you have wasted in this program. <span id="credALX">(suggested by alx.edits)</span>
+                    <br>
+                    <br>
+                    - Added a audio marker assistant. <span id="credRJX">(suggested by RJXspeed)</span>
+                    <br>
+                    - Helps you in finding beat points for any audio.
+                    <br>
+                    - Modes [Auto, custom, off].
+                    <br>
+                    <br>
+                    - Added preset tab.
+                    <br>
+                    - Everyone can now add AE effects, Plugins or their own presets to the pannels.
+                    <br>
+                    <br>
+                    - Added custom shakes tab.
+                    <br>
+                    - Position X, Position Y, Frequency, Seed. (soon even more)
+                    <br>
+                    <br>
+                    - Note section.
+                    <br>
+                    - Click the note icon to make some notes while you working.
+                    <br>
+                    <br>
+                    - Updated UI.
+                    <br>
+                    - New animations.
+                    <br>
+                    - Better slider for color selection.
+                    <br>
+                    - Added saturation slider.
+                    <br>
+                    - Improved overall performance.
+                    <br>
+                    <br>
+                    - Added Fort Knox.
+                </p>
+                
+            </div>
+            <h2 id="Logout">Logout</h2>
+        </div>
+        <div id="OfflineScreen">
+            <h1>0 <span>Offline</span> Logins left,<br>Connect to the Internet to set them to 10 again.</h1>
+        </div>
+        <div id="customLogMessage">
+            <div id="CenterLogMsg">
+                <h1 id="HeaderMSG"></h1>
+                <div id="LMFAO"></div>
+                <h2 id="BodyMSG"></h2>
+                <div class="SupportInfo">
+                    <h2 id="Support1"></h2><span id="Support2"></span>
+                </div>
+                <div class="SupportInfo">
+                    <h2 id="Support3"></h2><span id="Support4"></span>
+                </div>
+                <h2 id="BodyMSG2"></h2>
+            </div>
+        </div>
+        <div id="MaxDeviceLimit">
+            <div class="CenterUpdate">
+                <h1>The account has reached the max device limit.</h1>
+                <h2 id="contectSupport">Please contact the support for more info.</h2>
+
+                <span id="CopyDiscordThree">Discord</span>
+                <br>
+                <span id="CopyDownloadLinkThree">Website</span>
+                <p id="asnfuasdedusgb">Click the text to copy the link</p>
+            </div>
+        </div>
+        </div>
+        <div id="NewVersionRelease">
+            <div class="CenterUpdate">
+                <h1>Please update your Jerryflow to the latest version.</h1>
+
+                <span id="CopyDiscordThree2">Discord</span>
+                <br>
+                <span id="CopyDownloadLinkThree2">Website</span>
+                <p id="asnfuasdedusgb2">Click the text to copy the link (Download)</p>
+            </div>
+        </div>
+        <div id="minigame_one">
+            <div class="closingbutton" id="closeMiniGame"></div>
+            <h2 id="FlappyJerryTitle">Flappy Jerry | Version 1.0.0</h2>
+            <h2 id="FlappyJerryFPS">FPS: 0</h2>
+            <div id="volumebar">
+                <h1 id="gameVol_txt">Game volume: 30%</h1>
+                <div class="sliderfix">
+                    <input type="range" id="gameVol_var" class="sliders" min="0" max="100" value="30" step="1" />
+                </div>
+            </div>
+
+            <div id="FlappyJ">
+                <div id="flappyJerryBG"></div>
+                <div class="birdc" id="bird"></div>
+                <h1 id="flappyJerryScore">Score -> 0</h1>
+                <h1 id="little_info">Left or Right click to play :D</h1>
+            </div>
+        </div>
+        <div id="HowToUseJerryFlowV2" class="4tjushde8gs9tghgt">
+            <div class="closingbutton" id="closeHowTo"></div>
+            <h1>How to use</h1>
+            <div class="howtobg" id="curveSectionTab">
+                <h2>Curves</h2>
+                <div class="normal_underlineHowToSec" id="line0001"></div>
+                <div id="OpenCloseCurveSection"></div>
+                <div class="doubleHowToSec">
+                    <video loop muted autoplay id="HowToUseVideo1"></video>
+                    <div class="howtotextlayer" id="txt0000">
+                        <p class="ExtraBold">Curve Presets</p>
+                        <p>• You have <span>5 preset</span> curves and 20 custom slots.</p>
+                        <p>• Click on the + to add <span>new curves</span>.</p>
+                        <p>• Right click existing curves to <span>edit</span> or <span>remove</span> them.</p>
+                        <p>• If you Left click while you have keyframes selected, you can <span>apply</span> the current curve.</p>
+                    </div>
+                    <div class="howtotextlayer" id="txt0001">
+                        <p class="ExtraBold">Instant Curve</p>
+                        <p>• This tab can be accessed by just <span>rightclicking</span> the curve navigation icon.</p>
+                        <p>• Make your curve and <span>apply</span> it directly to keyframes.</p>
+                    </div>
+                    <video loop muted autoplay id="HowToUseVideo2" class="HowTorightVideo"></video>
+                </div>
+            </div>
+            <div class="howtobg" id="mainSectionTab">
+                <h2>Main</h2>
+                <div class="normal_underlineHowToSec" id="line0002"></div>
+                <div id="OpenCloseMainSection"></div>
+                <div class="doubleHowToSec">
+                    <video id="HowToUseVideo3" loop muted autoplay></video>
+                    <div id="txt0005">
+                        <p>• <span>Speed:</span> Changes the Speed of the selected Layer.</p>
+                        <p>• <span>Transform:</span> Changes Rotation, Flip side or or the origin in the Timeline of the selected Layer.</p>
+                        <p>• <span>Scale to comp:</span> Sets the scale of the selected clips to the Composition.</p>
+                        <p>• <span>Frameblending:</span> Turns Frameblending on/off for the whole Project.</p>
+                    </div>
+                    <div id="txt0006">
+                        <p>• <span>Guide Lines:</span> Tap it once to add a crosshair at the center of your Preview. Tap twice to overlay a grid. Pressing it a third time removes the overlay. Note: Ensure the 'guidelines' option is enabled under 'views' to make them visible.</p>
+                    </div>
+                    <div id="txt0007">
+                        <p>• <span>Null, Camera, Text, Adjustment Layer, Solid:</span> Adds a precut (Null, Camera, Text, Adjustment Layer, Solid) over the selected Layer or if no layer is selected on top of the Composition</p>
+                        <p>• <span>Pre-compose:</span> Pre-composes all selected clips.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="howtobg" id="effectSectionTab">
+                <h2>Effects</h2>
+                <div class="normal_underline" id="line0003"></div>
+                <div id="OpenCloseEffectSection"></div>
+                <div class="doubleHowToSec">
+                    <video id="HowToUseVideo4" loop muted autoplay></video>
+                    <div id="txt0002">
+                        <p>• Hover over a button to see <span>a preview</span> of the Effect/Shake on the right panel.</p>
+                    </div>
+                    <div id="txt0003">
+                        <p>• Click on the little <span>"gear" Icon</span> to open the Settings tab for the <span>current Effect</span> you're on.</p>
+                        <p>• For the <span>shake presets</span> you can adjust the settings right on the bottom where it says <span>"Settings"</span>.</p>
+                    </div>
+                    <video id="HowToUseVideo5" loop muted autoplay class="HowTorightVideo"></video>
+                    <video id="HowToUseVideo6" loop muted autoplay></video>
+                    <div id="txt0004">
+                        <p>• Use the "in" button to <span>start</span> the transition and the "out" button to <span>end</span> the transition</p>
+                    </div>
+                    <div>
+                        <p>• Just put ur assets in the <span>"\Documents\JerryFlow\Assets"</span> folder and reload. You can also click the text on the <span>bottom left</span> to open the folder. (Open Folder)</p>
+                        <p>• With <span>left click</span> you can add the asset into ur timeline. With a <span>right click</span> you can add or remove it as favourite.</p>
+                        <p>• To <span>navigate</span> just scroll with your mouse. Scroll <span>down</span> goes right, scroll up goes <span>left</span></p>
+                    </div>
+                    <video id="HowToUseVideo7" loop muted autoplay class="HowTorightVideo" id="previewvideo7"></video>
+                </div>
+            </div>
+            <div class="howtobg" id="settingsSectionTab">
+                <h2>Settings</h2>
+                <div class="normal_underline" id="line0004"></div>
+                <div id="OpenCloseSettingsSection"></div>
+                <div class="doubleHowToSec">
+                    <video id="HowToUseVideo8" loop muted autoplay></video>
+                    <div id="txt0008">
+                        <p>• Set the <span>color</span> of your layers that JerryFlow creates</p>
+                        <p>• You can change the <span>hue</span> of the whole UI or set it to <span>RGB</span> if you want.</p>
+                        <p>• If you find the <span>Icon-animations</span> a bit to distracting, you can Disable them.</p>
+                        <p>• Customize the UI Animation speed from <span>0ms to 300ms</span>.</p>
+                        <p>• Or just <span>RAGE QUIT</span>.</p>
+                    </div>
+                    <!--
+                    <p>• Set the color of your layers that JerryFlow creates</p>
+                    <p>• You can change the Hue of the whole UI or set it to RGB if you want.</p>
+                    <p>• If you find the Icon-animations a bit to distracting, you can Disable them.</p>
+                    <p>• Customize the UI Animation speed or disable it.</p>
+                    <p>• In the After Effects tab you have current info on the delay, min & max FPS of After Effects and the current ram usage of JerryFlow.</p>
+                    <p>• If you are Mad because stuff is not working as it should you, can just press the <span>RAGE QUIT</span> Button and it will take all your pain away, and it will closes After Effects for you.</p>
+                    -->
+                </div>
+            </div>
+        </div>
+        <audio id="scoreSound" src="resources/gamesfx/PlusScore.mp3" type="audio/mp3"></audio>
+        <audio id="scoreSound2" src="resources/gamesfx/PlusScore2.mp3" type="audio/mp3"></audio>
+        <audio id="upwhoosh" src="resources/gamesfx/UpSound.mp3" type="audio/mp3"></audio>
+        <audio id="bonkSound" src="resources/gamesfx/Bonk.mp3" type="audio/mp3"></audio>
+        <div id="notification">
+            <h1 id="theNotification">Bruh</h1>
+        </div>
+        <div id="dinoNotification">
+            <div id="dinoIcon"></div>
+            <div id="saveFile"></div>
+        </div>
+        <div id="NoteButton"></div>
+        <div id="SkeetLineCuzSkeetNavDesignLmfao"></div>
+        <div id="particle-container"></div>
+        <div id="spiderweb1" class="seasonTheme"></div>
+        <div id="tombstone1" class="seasonTheme"></div>
+        <div id="bat1" class="seasonTheme"></div>
+    </body>
+</html>
